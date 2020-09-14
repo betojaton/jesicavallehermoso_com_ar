@@ -1,0 +1,33 @@
+/*------------------------
+	icons
+-------------------------*/
+@function unicode($str) {
+  @return unquote("\"\\#{$str}\"");
+}
+
+$icon-calendar-60: unicode(ea02);
+$icon-like-2: unicode(ea03);
+$icon-spaceship: unicode(ea04);
+$icon-award-48: unicode(ea05);
+$icon-briefcase-24: unicode(ea06);
+
+.icon-calendar-60::before {
+  content: $icon-calendar-60;
+}
+
+.icon-like-2::before {
+  content: $icon-like-2;
+}
+
+.icon-spaceship::before {
+  content: $icon-spaceship;
+}
+
+.icon-award-48::before {
+  content: $icon-award-48;
+}
+
+.icon-briefcase-24::before {
+  content: $icon-briefcase-24;
+}
+
