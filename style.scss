@@ -1,7 +1,7 @@
 /* Colores*/
 $primary: #F93822;
 $secondary: #F7E448;
-$ligth: #FF8376; 
+$ligth: #FF8376;
 $dark: #A41000;
 $light-secondary: #FFF180;
 $dark-secondary: #A2962E;
@@ -9,23 +9,33 @@ $alpha: .5;
 
 
 /*Fuentes*/
-$font-family-sans-serif: 'Open Sans', sans-serif;
-$font-family-base:  'Open Sans', sans-serif;
-$headings-font-family: 'Open Sans Condensed', sans-serif;
+$font-family-sans-serif: 'Open Sans',
+sans-serif;
+$font-family-base: 'Open Sans',
+sans-serif;
+$headings-font-family: 'Open Sans Condensed',
+sans-serif;
 $headings-font-weight: 700;
 $display4-weight: 900;
 $headings-color: $primary;
 $text-muted: $ligth;
 $small-font-size: 70%;
 
-/*Form*/ 
+/*Form*/
 $component-active-bg: $ligth;
 $input-bg: $ligth;
 $input-color: $dark;
 
 /*Varios*/
-@mixin skew {-webkit-transform: skew(-10deg);transform: skewY(-10deg);}
-@mixin skew-off {-webkit-transform: skew(10deg);transform: skewY(10deg);}
+@mixin skew {
+    -webkit-transform: skew(-10deg);
+    transform: skewY(-10deg);
+}
+
+@mixin skew-off {
+    -webkit-transform: skew(10deg);
+    transform: skewY(10deg);
+}
 
 
 /* background: rgb(131,45,3);
@@ -40,130 +50,304 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#832d03', end
 /* TEMA */
 @import url(css/header.css);
 @import url(css/strip.css);
-@import url(css/animations.css); 
+@import url(css/animations.css);
 @import url(css/fontawesome-all.min.css);
+
 /* FIN IMPORTs */
 html {
-	scroll-behavior: smooth;
-}
-body { overflow-x: hidden; }
-h2 { font-size: 2.5rem; line-height: 90%}
-/*HEADER*/
-.navbar {z-index: 99; }
-@media (min-width: 768px) {
-	.navbar-brand
-	{
-		position: absolute;
-		left: 50%;
-		-webkit-transform: translateX(-50%);
-		transform: translateX(-50%);
-	}
+    scroll-behavior: smooth;
 }
 
-.navbar-nav .nav-item:hover, .navbar-nav .nav-item.active { @include skew; background-color: $primary; }
-.navbar-nav .nav-link { font-weight: 900; }
-.navbar-nav .nav-link:hover, .navbar-nav .nav-item.active .nav-link { background-color: transparent; color: #FFF;  }
+body {
+    overflow-x: hidden;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 90%
+}
+
+/*HEADER*/
+.navbar {
+    z-index: 99;
+}
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
+
+.navbar-nav .nav-item:hover,
+.navbar-nav .nav-item.active {
+    @include skew;
+    background-color: $primary;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 900;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item.active .nav-link {
+    background-color: transparent;
+    color: #FFF;
+     a:hover {
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    }
+}
+
 .navbar-brand img {
-	position: absolute;
-	z-index: 9;
-	margin-top: -29px;
+    position: absolute;
+    z-index: 9;
+    margin-top: -29px;
 }
+
 .carousel .item {
-	height:100vh;
-	max-width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
 }
+
 /*MAIN*/
 section {
-	padding: 6.5rem 0;
-	overflow: hidden;
+    padding: 6.5rem 0;
+    overflow: hidden;
 }
 
 .bg-skew {
-	position: absolute;
-	background-color: $secondary;
-	@include skew;
-	left: -1rem;
-	width: 130%;
-	height: 50%;
-	z-index: -2;
-	border-top: 20px solid $primary;
-}
-.bg-pattern {
-	background-image: url(img/bg-pattern.png);
-	background-repeat: no-repeat;
-	background-position: left center;
-}
-.jumbotron p {line-height: 90%;}
-/*tabs*/
-.tabbable .nav-pills {  
-	overflow-x: auto;
-	overflow-y:hidden;
-	flex-wrap: nowrap;
-}
-.nav-pills .nav-link.active {background-color: transparent;}
-.tab-content {	margin-top: -18px;}
-.slogan {font-size: 2.5rem; max-width: 480px;}
-.txtSup {
-	background-color: $primary;
-	color: #fff; 
-	padding: 3px 10px;
-	font-weight: bold;
-	font-weight: 400;
-	float: left;
-	@include skew; 
-	box-shadow: 0px 12px 0px 5px $secondary;
-}
-.txtInf {
-	float: left;
-	background-color: $secondary;
-	color: $primary; 
-	padding: 3px 10px;
-	font-weight: bold;
-	font-weight: 900;
-	@include skew;
-	display: block;
-	margin-bottom: -2px;
+    position: absolute;
+    background-color: $secondary;
+    @include skew;
+    left: -1rem;
+    width: 130%;
+    height: 50%;
+    z-index: -2;
+    border-top: 20px solid $primary;
 }
 
-.card, .card-header {
-	background-color: transparent;
-	padding: 0;
-	border: none;
+.bg-pattern {
+    background-image: url(img/bg-pattern.png);
+    background-repeat: no-repeat;
+    background-position: left center;
 }
-.card .btn { font-size: 1.5rem;  }
-.card-body { font-size: 0.85rem; }
-.card-body ul { padding-left: 1rem; }
-.card-header { border-bottom-width: 1px; border-bottom-style: solid;}
-.card-saludable .card-header {border-bottom-color: #006FBA;}
-.card-saludable .txtSup {color:#fff; background-color: #00528D; box-shadow: 0px 8px 0px 5px #006FBA;}
-.card-saludable .txtInf, #saludable {color:#fff; background-color: #006FBA;}
-.card-ecologico .card-header {border-bottom-color: #00A650;}
-.card-ecologico .txtSup {color:#fff; background-color: #007F3D; box-shadow: 0px 8px 0px 5px #00A650;}
-.card-ecologico .txtInf, #ecologico {color:#fff; background-color: #00A650;}
-.card-protegido .card-header {border-bottom-color: #007CA8;}
-.card-protegido .txtSup {color:#fff; background-color: #2A3867; box-shadow: 0px 8px 0px 5px #007CA8;}
-.card-protegido .txtInf, #protegido {color:#fff; background-color: #007CA8;}
-.card-deportivo .card-header {border-bottom-color: #B0451A;}
-.card-deportivo .txtSup {color:#fff; background-color: #833005; box-shadow: 0px 8px 0px 5px #B0451A;}
-.card-deportivo .txtInf, #deportivo {color:#fff; background-color: #B0451A;}
-.card-progresa .card-header {border-bottom-color: #935293;}
-.card-progresa .txtSup {color:#fff; background-color: #582A57; box-shadow: 0px 8px 0px 5px #935293;	}
-.card-progresa .txtInf, #progresa {color:#fff; background-color: #935293;}
-.card-trabaja .card-header {border-bottom-color: #FE5000;}
-.card-trabaja .txtSup {color:#fff; background-color: #8C2B02; box-shadow: 0px 8px 0px 5px #FE5000;}
-.card-trabaja .txtInf, #trabaja {color:#fff; background-color: #FE5000;}
-.card-turistico .card-header {border-bottom-color: #02947E;}
-.card-turistico .txtSup {color:#fff; background-color: #005549; box-shadow: 0px 8px 0px 5px #02947E;}
-.card-turistico .txtInf, #turistico {color:#fff; background-color: #02947E;}
+
+.jumbotron p {
+    line-height: 90%;
+}
+
+/*tabs*/
+.tabbable .nav-pills {
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+}
+
+.nav-pills .nav-link.active {
+    background-color: transparent;
+}
+
+.tab-content {
+    margin-top: -18px;
+}
+
+.slogan {
+    font-size: 2.5rem;
+    max-width: 480px;
+}
+
+.txtSup {
+    background-color: $primary;
+    color: #fff;
+    padding: 3px 10px;
+    font-weight: bold;
+    font-weight: 400;
+    float: left;
+    @include skew;
+    box-shadow: 0px 12px 0px 5px $secondary;
+}
+
+.txtInf {
+    float: left;
+    background-color: $secondary;
+    color: $primary;
+    padding: 3px 10px;
+    font-weight: bold;
+    font-weight: 900;
+    @include skew;
+    display: block;
+    margin-bottom: -2px;
+}
+
+.card,
+.card-header {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+}
+
+.card .btn {
+    font-size: 1.5rem;
+}
+
+.card-body {
+    font-size: 0.85rem;
+}
+
+.card-body ul {
+    padding-left: 1rem;
+}
+
+.card-header {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.card-saludable .card-header {
+    border-bottom-color: #006FBA;
+}
+
+.card-saludable .txtSup {
+    color: #fff;
+    background-color: #00528D;
+    box-shadow: 0px 8px 0px 5px #006FBA;
+}
+
+.card-saludable .txtInf,
+#saludable {
+    color: #fff;
+    background-color: #006FBA;
+}
+
+.card-ecologico .card-header {
+    border-bottom-color: #00A650;
+}
+
+.card-ecologico .txtSup {
+    color: #fff;
+    background-color: #007F3D;
+    box-shadow: 0px 8px 0px 5px #00A650;
+}
+
+.card-ecologico .txtInf,
+#ecologico {
+    color: #fff;
+    background-color: #00A650;
+}
+
+.card-protegido .card-header {
+    border-bottom-color: #007CA8;
+}
+
+.card-protegido .txtSup {
+    color: #fff;
+    background-color: #2A3867;
+    box-shadow: 0px 8px 0px 5px #007CA8;
+}
+
+.card-protegido .txtInf,
+#protegido {
+    color: #fff;
+    background-color: #007CA8;
+}
+
+.card-deportivo .card-header {
+    border-bottom-color: #B0451A;
+}
+
+.card-deportivo .txtSup {
+    color: #fff;
+    background-color: #833005;
+    box-shadow: 0px 8px 0px 5px #B0451A;
+}
+
+.card-deportivo .txtInf,
+#deportivo {
+    color: #fff;
+    background-color: #B0451A;
+}
+
+.card-progresa .card-header {
+    border-bottom-color: #935293;
+}
+
+.card-progresa .txtSup {
+    color: #fff;
+    background-color: #582A57;
+    box-shadow: 0px 8px 0px 5px #935293;
+}
+
+.card-progresa .txtInf,
+#progresa {
+    color: #fff;
+    background-color: #935293;
+}
+
+.card-trabaja .card-header {
+    border-bottom-color: #FE5000;
+}
+
+.card-trabaja .txtSup {
+    color: #fff;
+    background-color: #8C2B02;
+    box-shadow: 0px 8px 0px 5px #FE5000;
+}
+
+.card-trabaja .txtInf,
+#trabaja {
+    color: #fff;
+    background-color: #FE5000;
+}
+
+.card-turistico .card-header {
+    border-bottom-color: #02947E;
+}
+
+.card-turistico .txtSup {
+    color: #fff;
+    background-color: #005549;
+    box-shadow: 0px 8px 0px 5px #02947E;
+}
+
+.card-turistico .txtInf,
+#turistico {
+    color: #fff;
+    background-color: #02947E;
+}
+
 .foto-jesi {
-	position: absolute;
-	bottom: -100px;
-	padding-top: 100px;
-	right: 0;
+    position: absolute;
+    bottom: -100px;
+    padding-top: 100px;
+    right: 0;
 }
+
 /*FOOTER*/
-footer { z-index: 99; }
+footer {
+    z-index: 99;
+}
 
 /*MISC*/
-.skew {	@include skew;}
-@media (max-width: 767.98px) { .bg-skew {width: 104%;} .slogan {font-size: 1.5rem;} .display-4 {font-size: 2.8rem;}}
+.skew {
+    @include skew;
+}
+
+@media (max-width: 767.98px) {
+    .bg-skew {
+        width: 104%;
+    }
+
+    .slogan {
+        font-size: 1.5rem;
+    }
+
+    .display-4 {
+        font-size: 2.8rem;
+    }
+}
