@@ -8278,8 +8278,8 @@ h2 {
   color: #FFF;
 }
 
-.navbar-nav .nav-link:hover:hover,
-.navbar-nav .nav-item.active .nav-link:hover {
+.navbar-nav .nav-link:hover a:hover,
+.navbar-nav .nav-item.active .nav-link a:hover {
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;

@@ -95,7 +95,7 @@ h2 {
 .navbar-nav .nav-item.active .nav-link {
     background-color: transparent;
     color: #FFF;
-    &:hover {
+     a:hover {
 	-webkit-transition: all 0.4s ease-in-out;
 	-moz-transition: all 0.4s ease-in-out;
 	-o-transition: all 0.4s ease-in-out;
